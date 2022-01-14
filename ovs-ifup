@@ -1,0 +1,4 @@
+#!/bin/sh
+switch='br'
+ip link set up dev $1
+ovs-vsctl add-port ${switch} $1

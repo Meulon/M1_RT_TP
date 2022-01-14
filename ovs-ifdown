@@ -1,0 +1,4 @@
+#!/bin/sh
+switch='br'
+ip link set down dev $1
+ovs-vsctl del-port ${switch} $1
