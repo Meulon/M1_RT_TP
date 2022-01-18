@@ -22,7 +22,7 @@ sudo qemu-system-x86_64 -k fr -m 512 \
 -boot d \
 -device e1000,netdev=net0 \
 -netdev tap,id=net0,script=/etc/ovs-ifup,downscript=/etc/ovs-ifdown \
-&
+-display none &
 
 # ovs-docker add-port br eth0 alpine1 --ipaddress=192.168.1.10/24 --gateway=192.168.1.1
 # ovs-vsctl list-ports br
