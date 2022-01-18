@@ -27,5 +27,5 @@ sudo qemu-system-x86_64 -k fr -m 512 \
 # ovs-docker add-port br eth0 alpine1 --ipaddress=192.168.1.10/24 --gateway=192.168.1.1
 # ovs-vsctl list-ports br
 
-docker build -t webServer webServer/
-docker run -d --name webServer -p 80:80 webServer
+docker build -t webserver webServer/
+docker run -d --name webserver -p 80:80 webserver
