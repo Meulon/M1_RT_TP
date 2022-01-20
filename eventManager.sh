@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker pull eclipse-mosquitto
 docker run -d --name eventmanager -p 1883:1883 -p 9001:9001 --net=host eclipse-mosquitto
 

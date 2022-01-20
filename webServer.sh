@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker build -t webserver webServer/
 docker run -d --name webserver -p 80:80 webserver
 
