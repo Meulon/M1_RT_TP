@@ -1,10 +1,12 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-sudo apt update
-sudo apt install -y docker-ce python3-paho-mqtt lxc qemu qemu-utils qemu-system-x86 openvswitch-common openvswitch-switch
+sudo apt-get update
+sudo apt-get install -y docker-ce python3-pip lxc mosquitto qemu qemu-utils qemu-system-x86 openvswitch-common openvswitch-switch 
+pip install paho-mqtt
+
 wget -O gi.img "https://urca.s3.fr-par.scw.cloud/gi.img?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=SCWJXP44B4NSST966SNK%2F20220115%2Ffr-par%2Fs3%2Faws4_request&X-Amz-Date=20220115T113250Z&X-Amz-Expires=556055&X-Amz-Signature=4299f610a3d7c616b2852befde40d544cd71651c9b7f888d0f2860c4e25e9824&X-Amz-SignedHeaders=host"
 
 cp ovs-ifup /etc/
