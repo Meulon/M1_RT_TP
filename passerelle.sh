@@ -17,3 +17,7 @@ ovs-vsctl add-br br
 ip addr add 192.168.1.1/28 dev br
 ip link set dev br up
 ip link set dev ovs-system up
+
+ovs-vsctl add-br br-v
+ip addr add 10.0.0.0/8 dev br-v
+ip link set dev br-v up
