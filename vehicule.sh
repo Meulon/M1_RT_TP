@@ -1,8 +1,10 @@
 #!/bin/bash
 
-lxc-create -n vehicule -f vehicule/config -t download -- -d alpine -r 3.15 -a amd64
+sudo lxc-create -n vehicule -f vehicule/config -t download -- -d alpine -r 3.15 -a amd64
 
-ovs-vsctl add-port br-v br-clone
+sudo lxc-start -n vehicule
+
+sudo ovs-vsctl add-port br-v br-clone
 
 lxc-attach -n vehicule
 adduser driver
