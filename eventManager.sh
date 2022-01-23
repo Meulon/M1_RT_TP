@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker pull eclipse-mosquitto
-docker run -d --name eventmanager -p 1884:1883 -p 9002:9001 --net=host eclipse-mosquitto
+docker run -d --name eventmanager -p 1884:1883 -p 9002:9001 eclipse-mosquitto
 sudo ovs-docker add-port br eth1 eventmanager --ipaddress=192.168.1.2/24 --gateway=192.168.1.1
 
 # join docker to network
