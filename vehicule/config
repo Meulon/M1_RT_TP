@@ -1,4 +1,4 @@
-lxc.net.0.ipv4.address = 10.0.0.100/8
+lxc.net.0.ipv4.address = 172.16.0.100/24
 lxc.net.0.veth.pair = br-clone
 lxc.net.0.type = veth
 lxc.net.0.flags = up

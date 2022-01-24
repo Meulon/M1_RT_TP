@@ -18,7 +18,7 @@ sudo ip addr add 192.168.1.1/28 dev br
 sudo ip link set dev br up
 
 sudo ovs-vsctl add-br br-v
-sudo ip addr add 10.0.0.1/8 dev br-v
+sudo ip addr add 172.16.0.1/24 dev br-v
 sudo ip link set dev br-v up
 
 sudo ip link set dev ovs-system up
