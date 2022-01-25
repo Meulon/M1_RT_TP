@@ -6,7 +6,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt-get update
 sudo apt-get install -y docker-ce python3-pip lxc mosquitto qemu qemu-utils qemu-system-x86 openvswitch-common openvswitch-switch 
-pip install paho-mqtt
+pip3 install paho-mqtt
 
 sudo cp ovs-ifup /etc/
 sudo cp ovs-ifdown /etc/
